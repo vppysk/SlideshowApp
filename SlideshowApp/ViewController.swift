@@ -71,15 +71,17 @@ class ViewController: UIViewController {
         
         //ifで条件分岐したい。再生or停止
         if self.slide == nil{
-            buttonLabel.setTitle("停止", for: .normal)
-        
-            self.slide = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(viewNext), userInfo: nil, repeats: true)
+        buttonLabel.setTitle("停止", for: .normal)
+        self.slide = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(viewNext), userInfo: nil, repeats: true)
         }
+    }
     
     
+    @IBAction func viewStop(_ sender: Any) {
+    
+       
         if self.slide != nil{
             buttonLabel.setTitle("再生", for: .normal)
-            
             self.slide.invalidate()
             self.slide = nil
         }
