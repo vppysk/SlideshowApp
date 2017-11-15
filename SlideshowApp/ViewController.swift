@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     let imagec = UIImage(named: "IMG_5869.JPG")
     
     
+    @IBOutlet weak var bNext: UIButton!
+    @IBOutlet weak var bPrev: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,9 @@ class ViewController: UIViewController {
         
         
         imageView.image = imagea
+       
+    
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,17 +78,21 @@ class ViewController: UIViewController {
         if self.slide == nil{
         buttonLabel.setTitle("停止", for: .normal)
         self.slide = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(viewNext), userInfo: nil, repeats: true)
+          
+            bNext.isEnabled = false
+            bPrev.isEnabled = false
+            
         }
-    }
     
-    
-    @IBAction func viewStop(_ sender: Any) {
-    
-       
-        if self.slide != nil{
+        else {
             buttonLabel.setTitle("再生", for: .normal)
             self.slide.invalidate()
             self.slide = nil
+            
+            bNext.isEnabled = true
+            bPrev.isEnabled = true
+            
+            
         }
     
     }

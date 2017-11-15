@@ -10,10 +10,13 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    @IBOutlet weak var viewZoom: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+       
     }
 
     override func didReceiveMemoryWarning() {
