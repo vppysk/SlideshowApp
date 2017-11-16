@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,35 +19,40 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mja-cp-wrE">
-                                <rect key="frame" x="223" y="533" width="31" height="30"/>
+                                <rect key="frame" x="278" y="632" width="31" height="30"/>
                                 <state key="normal" title="進む"/>
                                 <connections>
                                     <action selector="viewNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6LL-D2-S4v"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0d-ed-ZUG">
-                                <rect key="frame" x="147" y="533" width="31" height="30"/>
+                                <rect key="frame" x="147" y="632" width="86" height="30"/>
                                 <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="viewStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="62j-IZ-Ojb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Onf-b6-khM">
-                                <rect key="frame" x="66" y="533" width="31" height="30"/>
+                                <rect key="frame" x="66" y="632" width="31" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <action selector="viewPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sVR-Tb-WDy"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wGO-px-VIm">
-                                <rect key="frame" x="50" y="100" width="220" height="313"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wGO-px-VIm">
+                                <rect key="frame" x="50" y="100" width="275" height="412"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vrg-aY-HLv" appends="YES" id="Oxq-aQ-xtR"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="M0d-ed-ZUG" secondAttribute="bottom" constant="5" id="3xj-WP-ox8"/>
                             <constraint firstItem="mja-cp-wrE" firstAttribute="leading" secondItem="M0d-ed-ZUG" secondAttribute="trailing" constant="45" id="Dnf-J5-SAm"/>
@@ -63,6 +68,9 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Onf-b6-khM" secondAttribute="bottom" constant="5" id="wSg-E7-5ie"/>
                             <constraint firstItem="mja-cp-wrE" firstAttribute="top" secondItem="wGO-px-VIm" secondAttribute="bottom" constant="120" id="wn7-qk-f7D"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vrg-aY-HLv" appends="YES" id="ao5-ax-qOR"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="bNext" destination="mja-cp-wrE" id="G8G-TQ-xwH"/>
@@ -72,6 +80,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vrg-aY-HLv">
+                    <connections>
+                        <segue destination="nZI-9x-koE" kind="show" id="muN-fU-loo"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="133.125" y="127.8169014084507"/>
         </scene>
@@ -84,14 +97,14 @@
                         <viewControllerLayoutGuide type="bottom" id="t3O-9a-s8z"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hgl-Cu-gWL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Gy-uJ-1DV">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="526"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="625"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfq-1O-HaL">
-                                <rect key="frame" x="136" y="536" width="48" height="30"/>
+                                <rect key="frame" x="136" y="635" width="103" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="Wbm-bf-Njd" kind="unwind" unwindAction="unwind:" id="0LA-4h-HR6"/>
