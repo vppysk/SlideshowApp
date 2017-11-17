@@ -101,13 +101,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Gy-uJ-1DV">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="625"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfq-1O-HaL">
-                                <rect key="frame" x="136" y="635" width="103" height="30"/>
+                                <rect key="frame" x="136" y="627" width="103" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="Wbm-bf-Njd" kind="unwind" unwindAction="unwind:" id="0LA-4h-HR6"/>
+                                    <segue destination="Wbm-bf-Njd" kind="unwind" unwindAction="unwind:" id="5xQ-mD-qKE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -115,11 +115,11 @@
                         <constraints>
                             <constraint firstItem="rfq-1O-HaL" firstAttribute="leading" secondItem="hgl-Cu-gWL" secondAttribute="leadingMargin" constant="120" id="8Hy-9D-u3Q"/>
                             <constraint firstAttribute="trailing" secondItem="3Gy-uJ-1DV" secondAttribute="trailing" id="Ee2-3l-4Xo"/>
-                            <constraint firstItem="rfq-1O-HaL" firstAttribute="top" secondItem="3Gy-uJ-1DV" secondAttribute="bottom" constant="10" id="HTL-aQ-5eV"/>
+                            <constraint firstItem="rfq-1O-HaL" firstAttribute="top" secondItem="3Gy-uJ-1DV" secondAttribute="bottom" constant="20" id="HTL-aQ-5eV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rfq-1O-HaL" secondAttribute="trailing" constant="120" id="Y0a-Ic-YYp"/>
                             <constraint firstItem="3Gy-uJ-1DV" firstAttribute="top" secondItem="hgl-Cu-gWL" secondAttribute="top" id="bzp-Sg-3pt"/>
                             <constraint firstItem="3Gy-uJ-1DV" firstAttribute="leading" secondItem="hgl-Cu-gWL" secondAttribute="leading" id="qVG-bv-huM"/>
-                            <constraint firstItem="t3O-9a-s8z" firstAttribute="top" secondItem="rfq-1O-HaL" secondAttribute="bottom" constant="2" id="yp1-Qw-FPf"/>
+                            <constraint firstItem="t3O-9a-s8z" firstAttribute="top" secondItem="rfq-1O-HaL" secondAttribute="bottom" constant="10" id="yp1-Qw-FPf"/>
                         </constraints>
                     </view>
                     <connections>

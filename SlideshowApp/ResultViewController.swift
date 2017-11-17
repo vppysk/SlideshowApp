@@ -10,15 +10,15 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
-    //var i = UIImage(named: "IMG_5867.JPG")
+    var i = UIImage(named: "IMG_5867.JPG")
 
     
-    @IBOutlet weak var viewZoomR: UIImageView!
+    @IBOutlet weak var viewZoom: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //viewZoomR.image = i
+        viewZoom.image = i
 
         // Do any additional setup after loading the view.
        
