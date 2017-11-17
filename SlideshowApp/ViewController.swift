@@ -41,7 +41,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // segueから遷移先のResultViewControllerを取得する
+        
+        //let resultViewController:ResultViewController = segue.destination as! ResultViewController
+        
+        //resultViewController.i = imageView.image
+    //}
     
     
     @IBAction func viewNext(_ sender: Any) {

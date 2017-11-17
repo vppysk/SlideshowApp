@@ -10,10 +10,15 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
-    @IBOutlet weak var viewZoom: UIImageView!
+    //var i = UIImage(named: "IMG_5867.JPG")
+
+    
+    @IBOutlet weak var viewZoomR: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //viewZoomR.image = i
 
         // Do any additional setup after loading the view.
        
