@@ -68,9 +68,6 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Onf-b6-khM" secondAttribute="bottom" constant="5" id="wSg-E7-5ie"/>
                             <constraint firstItem="mja-cp-wrE" firstAttribute="top" secondItem="wGO-px-VIm" secondAttribute="bottom" constant="120" id="wn7-qk-f7D"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="vrg-aY-HLv" appends="YES" id="ao5-ax-qOR"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="bNext" destination="mja-cp-wrE" id="G8G-TQ-xwH"/>
@@ -101,25 +98,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Gy-uJ-1DV">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfq-1O-HaL">
-                                <rect key="frame" x="136" y="627" width="103" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFJ-lW-X5m">
+                                <rect key="frame" x="172" y="617" width="31" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FmQ-ce-9fA"/>
+                                </constraints>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="Wbm-bf-Njd" kind="unwind" unwindAction="unwind:" id="5xQ-mD-qKE"/>
+                                    <segue destination="Wbm-bf-Njd" kind="unwind" unwindAction="unwindWithSegue:" id="bUk-OM-gb9"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rfq-1O-HaL" firstAttribute="leading" secondItem="hgl-Cu-gWL" secondAttribute="leadingMargin" constant="120" id="8Hy-9D-u3Q"/>
-                            <constraint firstAttribute="trailing" secondItem="3Gy-uJ-1DV" secondAttribute="trailing" id="Ee2-3l-4Xo"/>
-                            <constraint firstItem="rfq-1O-HaL" firstAttribute="top" secondItem="3Gy-uJ-1DV" secondAttribute="bottom" constant="20" id="HTL-aQ-5eV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rfq-1O-HaL" secondAttribute="trailing" constant="120" id="Y0a-Ic-YYp"/>
-                            <constraint firstItem="3Gy-uJ-1DV" firstAttribute="top" secondItem="hgl-Cu-gWL" secondAttribute="top" id="bzp-Sg-3pt"/>
-                            <constraint firstItem="3Gy-uJ-1DV" firstAttribute="leading" secondItem="hgl-Cu-gWL" secondAttribute="leading" id="qVG-bv-huM"/>
-                            <constraint firstItem="t3O-9a-s8z" firstAttribute="top" secondItem="rfq-1O-HaL" secondAttribute="bottom" constant="10" id="yp1-Qw-FPf"/>
+                            <constraint firstAttribute="trailing" secondItem="3Gy-uJ-1DV" secondAttribute="trailing" id="3H8-kL-XOI"/>
+                            <constraint firstItem="3Gy-uJ-1DV" firstAttribute="top" secondItem="hgl-Cu-gWL" secondAttribute="top" id="C8Y-Pa-7MT"/>
+                            <constraint firstItem="PFJ-lW-X5m" firstAttribute="centerX" secondItem="hgl-Cu-gWL" secondAttribute="centerX" id="HTR-ml-2Db"/>
+                            <constraint firstItem="PFJ-lW-X5m" firstAttribute="top" secondItem="3Gy-uJ-1DV" secondAttribute="bottom" constant="20" id="LQv-ns-8Ok"/>
+                            <constraint firstItem="3Gy-uJ-1DV" firstAttribute="leading" secondItem="hgl-Cu-gWL" secondAttribute="leading" id="OX9-Nt-azy"/>
+                            <constraint firstItem="t3O-9a-s8z" firstAttribute="top" secondItem="PFJ-lW-X5m" secondAttribute="bottom" constant="20" id="kob-D0-gXP"/>
                         </constraints>
                     </view>
                     <connections>
@@ -129,7 +128,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lkc-NX-MfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Wbm-bf-Njd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="956.25" y="130.98591549295776"/>
+            <point key="canvasLocation" x="951.20000000000005" y="128.18590704647679"/>
         </scene>
     </scenes>
 </document>
