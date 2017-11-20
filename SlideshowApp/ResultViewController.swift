@@ -18,6 +18,7 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         viewZoom.image = i
 
         // Do any additional setup after loading the view.

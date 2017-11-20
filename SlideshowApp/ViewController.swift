@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var bNext: UIButton!
     @IBOutlet weak var bPrev: UIButton!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -43,6 +44,16 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // segueから遷移先のResultViewControllerを取得する
+       
+        if self.slide != nil{
+            buttonLabel.setTitle("再生", for: .normal)
+        self.slide.invalidate()
+        self.slide = nil
+        
+        bNext.isEnabled = true
+        bPrev.isEnabled = true
+        }
+        
         
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
         
@@ -102,6 +113,8 @@ class ViewController: UIViewController {
         }
     
     }
+   
+
         
        
     
